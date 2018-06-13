@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PoolComponent } from './pool/pool.component';
+import { ClimbComponent } from './climb/climb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PoolComponent
+    PoolComponent,
+    ClimbComponent
   ],
   imports: [
     BrowserModule
