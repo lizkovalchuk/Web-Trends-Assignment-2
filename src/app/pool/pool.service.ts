@@ -13,7 +13,7 @@ export class PoolService {
     {id: 3, Name: 'Sunnyside - Gus Ryder Outdoor Pool', Address: '1755 Lake Shore Blvd W', City: 'Toronto', PostalCode: 'M6S 5A3'},
   ];
 
-  getPlanets(): Observable<Pool[]>{
+  getPools(): Observable<Pool[]>{
     return of(this.pools);
   }
 
