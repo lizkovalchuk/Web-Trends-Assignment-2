@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PoolComponent } from './pool/pool.component';
 import { ClimbComponent } from './climb/climb.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ClimbComponent } from './climb/climb.component';
     ClimbComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
