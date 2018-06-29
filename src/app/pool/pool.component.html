@@ -1,4 +1,6 @@
-<p>
-  /* <!- <app-pool></app-pool> ->
-  Pool works!
-</p>
+
+
+
+<ul *ngIf='pools'>
+  <li *ngFor='let p of pools'>{{ p.name }}</li>
+</ul>
