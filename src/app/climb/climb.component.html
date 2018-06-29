@@ -1,3 +1,3 @@
-<p>
-  climb works!
-</p>
+<ul *ngIf='climbs'>
+  <li *ngFor='let c of climbs'>{{ c.name }}</li>
+</ul>

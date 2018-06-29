@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClimbingGym } from './climb';
+import { ClimbService } from './climb.service';
 
 @Component({
   selector: 'app-climb',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClimbComponent implements OnInit {
 
-  constructor() { }
+  climbs: ClimbingGym[];
+
+  constructor(
+    private climbService: ClimbService
+  ) { }
 
   ngOnInit() {
+    this.climbService.getClimbingGyms().subscribe(data => this.climbs = data)
   }
 
 }
