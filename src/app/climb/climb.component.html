@@ -7,3 +7,7 @@
 <ul *ngIf='climbs'>
   <li *ngFor='let c of climbs'>{{ c.name }}</li>
 </ul>
+
+<div *ngIf='error'>
+  HTTP ERROR: STATUS:{{error.status}}
+  </div>
