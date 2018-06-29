@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pool } from './pool'
+import { PoolService } from './pool.service';
 
 @Component({
   selector: 'app-pool',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pool.component.css']
 })
 export class PoolComponent implements OnInit {
-
-  constructor() { }
+  pools: Pool[];
+  
+  
+  constructor(
+    private poolService: PoolService
+  ) { }
 
   ngOnInit() {
+    this.poolService.getPools().subscribe(data => this.pools = data)
   }
 
 }

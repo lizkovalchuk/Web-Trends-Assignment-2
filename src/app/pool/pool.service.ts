@@ -16,8 +16,8 @@ export class PoolService {
     return this.http.get<Pool>(this.apiUrl + '&name=${name}');
   }
 
-  getPools() : Observable<Pool>{
-    return this.http.get<Pool>(this.apiUrl);
+  getPools() : Observable<Pool[]>{
+    return this.http.get<Pool[]>(this.apiUrl);
   }
 
   constructor(
