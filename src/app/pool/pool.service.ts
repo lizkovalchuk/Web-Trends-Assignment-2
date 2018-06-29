@@ -10,7 +10,7 @@ export class PoolService {
 
   public errorMessage: string;
 
-  apiUrl: string = 'http://lkquartet.com/assignmentAPI.php?api_key=pool-info';
+  apiUrl: string = 'http://lkquartet.com/assignmentAPI.php?api_key=pool-info2';
 
   getPool(name: string) : Observable<Pool>{
     return this.http.get<Pool>(this.apiUrl + '&name=${name}');

@@ -1,6 +1,9 @@
 
-
+<div *ngIf='error'>
+HTTP ERROR: STATUS:{{error.status}}
+</div>
 
 <ul *ngIf='pools'>
   <li *ngFor='let p of pools'>{{ p.name }}</li>
 </ul>
+

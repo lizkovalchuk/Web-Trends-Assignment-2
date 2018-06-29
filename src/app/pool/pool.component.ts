@@ -9,14 +9,15 @@ import { PoolService } from './pool.service';
 })
 export class PoolComponent implements OnInit {
   pools: Pool[];
-  
+  error;
   
   constructor(
     private poolService: PoolService
   ) { }
 
   ngOnInit() {
-    this.poolService.getPools().subscribe(data => this.pools = data)
+    this.poolService.getPools().subscribe(data => this.pools = data, error => 
+      {this.error = error})
   }
 
 }

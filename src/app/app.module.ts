@@ -11,7 +11,8 @@ import { AppRoutingModule } from './/app-routing.module';
   declarations: [
     AppComponent,
     PoolComponent,
-    ClimbComponent
+    ClimbComponent,
+    
   ],
   imports: [
     BrowserModule,
