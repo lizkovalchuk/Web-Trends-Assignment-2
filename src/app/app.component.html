@@ -1,27 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="page" background-image-directive="{../assets/pic.png}">
+<div id="page-wrapper" class="page">
   <div style="text-align:center">
     <h1>
       Welcome to {{ title }}!
     </h1>
   </div>
-  <h2>Find A Place to Swim or Climb in Toronto: </h2>
+  <h2 id="blurb">Find A Place to Swim or Climb in Toronto</h2>
   <ul>
     <div style="display: grid; grid-template-columns: 1fr 1fr">
       <div>
           <li>
-              <h2><a style="text-decoration: none; text-align: center" routerLink="/pool">Pools</a></h2>
+              <h2><a style="text-decoration: none; color:white" class="sports" routerLink="/pool">Pools</a></h2>
             </li>
       </div>
       <div>
         <li>
-            <h2><a style="text-decoration: none; text-align: center" routerLink="/climb">Rock Climbing</a></h2>
+            <h2><a style="text-decoration: none; color:white" class="sports" routerLink="/climb">Rock Climbing</a></h2>
         </li>
       </div>
     </div>
   </ul>
 </div>
+<div id="components">
+    <router-outlet></router-outlet>
+</div>
 
-<router-outlet></router-outlet>
 
 

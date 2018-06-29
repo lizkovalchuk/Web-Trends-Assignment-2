@@ -1,13 +1,10 @@
-body {
-	background-image: url("../assets/pic.png");
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
+
+
 
 h1 , h2 {
 	font-family: sans-serif;
+	color: white;
+	font-weight: 100;
 }
 
 ul, li  {
@@ -18,3 +15,17 @@ ul, li  {
 	background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
 	background-size: cover;
 } */
+
+.sports{
+	margin-left: 20%;
+}
+
+#blurb{
+	margin-left: 30%;
+}
+
+#components{
+	/* margin: 0 auto; */
+	margin-left: 35%;
+	margin-top: 15%;
+}
