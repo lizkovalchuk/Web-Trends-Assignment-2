@@ -9,6 +9,7 @@ import { PoolService } from './pool.service';
 })
 export class PoolComponent implements OnInit {
   pools: Pool[];
+  pool: Pool;
   error;
   
   constructor(
@@ -18,6 +19,11 @@ export class PoolComponent implements OnInit {
   ngOnInit() {
     this.poolService.getPools().subscribe(data => this.pools = data, error => 
       {this.error = error})
+  }
+
+  filter(name){
+    this.poolService.getPoolDetails(name).subscribe(data => { this.pool = data[0]})
+
   }
 
 }

@@ -1,16 +1,19 @@
 
 
 <form>
-  <fieldset>
-    <ul *ngIf='pools'>
-      <div *ngFor='let c of pools'>
-        <label style='display: block'>{{c.name}}</label>
-      <input style='display: block' type="radio" name="radio">
-      </div>
-    </ul>
-  </fieldset>
-</form>
-
-<div *ngIf='error'>
-  HTTP ERROR: STATUS:{{error.status}}
+    <fieldset>
+      <ul *ngIf='pools'>
+        <div *ngFor='let p of pools'>
+          <label>{{ p.name }}</label>   
+          <input style="float: right" type="radio" name="radio" (click)="filter(p.name)" value="{{ p.id }}">     
+        </div>
+      </ul>
+    </fieldset>
+  </form>
+  <div *ngIf='pool'>
+      <li style="margin-top: 2%; margin-left: 25%">{{pool.address}}</li>
   </div>
+  <div *ngIf='error'>
+    HTTP ERROR: STATUS:{{error.status}}
+  </div>
+

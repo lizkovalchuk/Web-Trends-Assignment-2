@@ -20,6 +20,10 @@ export class PoolService {
     return this.http.get<Pool[]>(this.apiUrl);
   }
 
+  getPoolDetails(name: string): Observable<Pool[]>{
+    return this.http.get<Pool[]>(this.apiUrl + `&name=${name}`);
+  }
+
   constructor(
     private http: HttpClient
   ) { }
