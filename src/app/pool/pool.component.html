@@ -1,9 +1,15 @@
 
 
-
-<ul *ngIf='pools'>
-  <li *ngFor='let p of pools'>{{ p.name }}</li>
-</ul>
+<form>
+  <fieldset>
+    <ul *ngIf='pools'>
+      <div *ngFor='let c of pools'>
+        <label style='display: block'>{{c.name}}</label>
+      <input style='display: block' type="radio" name="radio">
+      </div>
+    </ul>
+  </fieldset>
+</form>
 
 <div *ngIf='error'>
   HTTP ERROR: STATUS:{{error.status}}
