@@ -10,6 +10,7 @@ import { ClimbService } from './climb.service';
 export class ClimbComponent implements OnInit {
 
   climbs: ClimbingGym[];
+  climb : ClimbingGym;
   error;
 
   constructor(
@@ -19,6 +20,10 @@ export class ClimbComponent implements OnInit {
   ngOnInit() {
     this.climbService.getClimbingGyms().subscribe(data => this.climbs = data, error => {this.error = error}
     )
+  }
+
+  filter(id){
+    this.climbService.getClimbingDetails(id).subscribe(data => { this.climb = data[0]})
   }
 
 }

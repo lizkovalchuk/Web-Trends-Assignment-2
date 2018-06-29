@@ -1,21 +1,16 @@
-<!-- <form>
-  <label>Sear here for details:</label>
-  <br/>
-  <button type="text" onclick="">
-</form> -->
-
 <form>
   <fieldset>
     <ul *ngIf='climbs'>
       <div *ngFor='let c of climbs'>
-        <label  style='display: block'>{{ c.name }}</label>   
-        <input style='display: block' type="radio" name="radio" >     
+        <label>{{ c.name }}</label>   
+        <input style="float: right" type="radio" name="radio" (click)="filter(c.id)" value="{{ c.id }}">     
       </div>
     </ul>
   </fieldset>
 </form>
-
-
+<div *ngIf='climb'>
+    <li style="margin-top: 2%; margin-left: 25%">{{climb.address}}</li>
+</div>
 <div *ngIf='error'>
   HTTP ERROR: STATUS:{{error.status}}
-  </div>
+</div>

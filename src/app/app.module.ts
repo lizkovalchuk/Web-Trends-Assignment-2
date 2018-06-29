@@ -6,12 +6,14 @@ import { PoolComponent } from './pool/pool.component';
 import { ClimbComponent } from './climb/climb.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
+import { ClimbDetailsComponent } from './climb-details/climb-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PoolComponent,
     ClimbComponent,
+    ClimbDetailsComponent,
     
   ],
   imports: [
