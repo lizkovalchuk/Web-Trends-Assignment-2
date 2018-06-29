@@ -20,6 +20,10 @@ getClimbingGyms(): Observable<ClimbingGym[]>{
   return this.http.get<ClimbingGym[]>(this.apiUrl);
 }
 
+getClimbingDetails(id: number): Observable<ClimbingGym[]>{
+  return this.http.get<ClimbingGym[]>(this.apiUrl + `&id=${id}`);
+}
+
 constructor(
   private http: HttpClient
 ) { }

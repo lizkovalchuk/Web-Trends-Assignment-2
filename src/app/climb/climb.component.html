@@ -1,12 +1,20 @@
-<form>
+<!-- <form>
   <label>Sear here for details:</label>
   <br/>
-  <input type="text">
+  <button type="text" onclick="">
+</form> -->
+
+<form>
+  <fieldset>
+    <ul *ngIf='climbs'>
+      <div *ngFor='let c of climbs'>
+        <label  style='display: block'>{{ c.name }}</label>   
+        <input style='display: block' type="radio" name="radio" >     
+      </div>
+    </ul>
+  </fieldset>
 </form>
 
-<ul *ngIf='climbs'>
-  <li *ngFor='let c of climbs'>{{ c.name }}</li>
-</ul>
 
 <div *ngIf='error'>
   HTTP ERROR: STATUS:{{error.status}}
