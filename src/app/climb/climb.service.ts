@@ -14,7 +14,7 @@ export class ClimbService {
 //     {id: 3, name: 'Pride Comes Before the Fall Climbing', address: '666 Devils Place Lane', accessible: false, bouldering: true, level: 'advanced'}
 // ];
 
-apiUrl: string = 'http://matthewweber.ca/api/restapi.php?apikey=666';
+apiUrl: string = 'http://matthewweber.ca/api/restapi.php?api_key=666';
 
 getClimbingGyms(): Observable<ClimbingGym[]>{
   return this.http.get<ClimbingGym[]>(this.apiUrl);
